@@ -123,7 +123,7 @@ log:
   # Log message for sold items
   sellMessage: "%player% has just sold x%amount% %item% for %price%."
   # Log message for sold all items
-  sellAllMessage: "%player% sold all %amount% x %item% for %price% to %shop% shop"
+  sellAllMessage: "%player% has just sold %items%"
 
 # Change the format of the numbers
 priceFormat:
