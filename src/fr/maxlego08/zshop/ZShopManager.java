@@ -39,6 +39,7 @@ import fr.maxlego08.zshop.zcore.utils.Pair;
 import fr.maxlego08.zshop.zcore.utils.ZUtils;
 import fr.maxlego08.zshop.zcore.utils.nms.NmsVersion;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.CreatureSpawner;
@@ -493,7 +494,7 @@ public class ZShopManager extends ZUtils implements ShopManager {
         if (LogConfig.enableLog) {
             String logMessage = LogConfig.sellAllMessage;
 
-            logMessage = logMessage.replace("%items%", results == null ? "ERROR" : results);
+            logMessage = ChatColor.stripColor(logMessage.replace("%items%", results == null ? "ERROR" : results).replace("&", "§"));
             logMessage = logMessage.replace("%player%", player.getName());
             logMessage = logMessage.replace("%uuid%", player.getUniqueId().toString());
 

@@ -10,7 +10,7 @@ public class ShopAction {
     private double price;
 
     public ShopAction(ItemStack itemStack, ItemButton itemButton, double price) {
-        this.itemStack = itemStack;
+        this.itemStack = itemStack.clone();
         this.itemButton = itemButton;
         this.price = price;
     }
